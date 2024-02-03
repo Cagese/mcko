@@ -5,7 +5,7 @@ with open('scientist.txt', encoding='utf8') as file:
     file = list(csv.DictReader(file, delimiter='#', quotechar='"'))
 
 def initial_name(name):
-    surname,name, pat = name.split()
+    surname, name, pat = name.split()
     return f'{surname} {name[0]}.{pat[0]}.'
 
 

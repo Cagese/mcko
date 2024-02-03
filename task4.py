@@ -17,8 +17,10 @@ def password_generator():
 for i in file:
     i['login'] = login_generator(i['ScientistName'])
     i['password'] = password_generator()
-with open('scientist_password.csv','w',encoding='utf8',newline='') as new_file:
+with open('scientist_password.csv', 'w', encoding='utf8', newline='') as new_file:
     # Создание нового csv файла с данными из scientist.txt и данными о логине и пароле
-    new_file = csv.DictWriter(new_file,fieldnames=['ScientistName','preparation','date','components','login','password'],quotechar='"',delimiter='#')
+    new_file = csv.DictWriter(new_file,
+                              fieldnames=['ScientistName', 'preparation', 'date', 'components', 'login', 'password'],
+                              quotechar='"', delimiter='#')
     new_file.writeheader()
     new_file.writerows(file[1:])
