@@ -14,5 +14,4 @@ with open('scientist.txt', encoding='utf8') as file:
 for i in range(1,6):
     # Вывод нужных данных в консоль
     print(f'{file[i][0]}:{file[i][1]}')
-    print(file[i][2])
 
